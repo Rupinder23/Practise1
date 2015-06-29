@@ -1,0 +1,120 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<link href="css/upslide.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery.upslide.js"></script>
+</head>
+<body>
+<div id="upslide" class="upslide">
+<ul>
+
+<li class="upslide-bannerBackground" style="display: block;background:url('img/slide1.jpg') no-repeat;background-position:center">
+<div>
+<p class="upslide-bannerText">Slide 1</p>
+</div>
+</li>
+
+<li class="upslide-bannerBackground" style="display: block;background:url('img/slide2.jpg') no-repeat;background-position:center">
+<div>
+<p class="upslide-bannerText">Slide 2</p>
+</div>
+</li>
+
+</ul>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+var upslide = $('#upslide > ul').upslide({
+// how fast the slide will transition
+speed: 2000,
+
+// delay between slide transitions
+delay: 3000,
+
+// effect to use for slide transition
+easing: 'linear',
+
+// fade headers in during slide transition
+fadingHeaders: false,
+
+// how fast to fade in headers during transition
+fadingHeadersSpeed: 2000,
+
+// hide the header text (useful if you want the header text on the thumbnails but not the slide)
+headerHideText: false,
+
+// transaparency of the header background
+headerBackgroundTransparency: 0.5,
+
+// colors to apply to the header's background
+headerBackgroundColor: ['red', 'green'],
+
+// generate colors that are not assigned a color (if false then it will cycle through "headerBackgroundColor")
+headerGenerateBackgroundColor: true,
+
+// make the thumbnail indicator the same color as the current slide's header background
+sameSlideAndHeaderColor: true,
+
+// make it fullscreen
+fullscreen: false,
+
+// slide automatically
+autoSlide: true,
+
+// allow users to use "up" and "down" arrows to navigate the slides
+arrowControl: false,
+
+// allow users to use the scrolling on the mouse to navigate (requires: mousewheel.js)
+scrollControl: false,
+
+// show thumbnails of the slides
+thumbnail: true,
+
+// position of the thumbnails
+thumbnailPosition: 'left',
+
+// show the header text on the thumbnails
+thumbnailHeader: false,
+
+// border size (if any) of the thumbnails to adjust for the height of the slides
+thumbnailBorderSize: '0',
+
+// width of the thumbnails in relation to the parent of the slide (if fullscreen, then in relation to the width of the screen)
+thumbnailWidth: '10%',
+
+// desired height of the thumbnails
+thumbnailHeight: 'auto',
+
+// allow scrolling the thumbnails (does not control the slider, think of it as allowing you to browse)
+thumbnailWrapper<a href="http://www.jqueryscript.net/tags.php?/Scroll/">Scroll</a>able: false,
+
+// thumbnail indicator options
+thumbnailIndicator: {
+    // speed at which it moves to the next slide
+    speed: 2000,
+    // effect to use for the transition
+    easing: 'linear',
+    // color for the slider (if "sameSlideAndHeaderColor" is true, then this gets ignored)
+    backgroundColor: [],
+    // width of the indidcator
+    width: '2px',
+    // position of the slider
+    position: {
+        // the side of the thumbnails it is on
+        side: 'right',
+        // put it on the inside of the thumbnail (overlap the thumbnail) or outside (show all of the thumbnail)
+        inOrOut: 'in'
+    }
+},
+// call a function when a slide slides
+onSlide: function() { return false; },
+// call a function when the slide starts to slide
+onSlideStart: function() { return false; },
+// call a function when the slide completes its slide
+onSlideComplete: function() { return false; }
+});
+});
+</script>
+</body>
+</html>
